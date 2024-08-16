@@ -21,7 +21,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: checkout dacstore
+    - name: checkout
       uses: actions/checkout@v4
 
     - uses: actions/setup-python@v5
@@ -38,3 +38,18 @@ jobs:
         WANDB_CONSOLE: "off"
       run: |
         python access-esgf.py
+
+    - name: Check if there are any changes in the table
+      id: verify_diff
+      run: |
+        git diff euro-cordex-esgf.csv || echo "changed=true" >> $GITHUB_OUTPUT
+
+    - name: Commit and push
+      if: steps.verify_diff.outputs.changed == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        #(pre-commit run --all-files) || true
+        git commit euro-cordex-esgf.csv -m "update table"
+        git status
+        git push
