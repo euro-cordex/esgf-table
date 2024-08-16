@@ -42,7 +42,7 @@ jobs:
     - name: Check if there are any changes in the table
       id: verify_diff
       run: |
-        git diff euro-cordex-esgf.csv || echo "changed=true" >> $GITHUB_OUTPUT
+        git diff euro-cordex-esgf.csv --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: Commit and push
       if: steps.verify_diff.outputs.changed == 'true'
