@@ -14,8 +14,8 @@ url = "https://raw.githubusercontent.com/euro-cordex/esgf-table/master/euro-cord
 df = pd.read_csv(url)
 
 # group the data to have a more readable layout.
-cordex_table = df.groupby(['institute', 'model_id', 'driving_model_id', 
-                           'experiment_id', 'member', 'frequency', 
+cordex_table = df.groupby(['institute', 'model_id', 'driving_model_id',
+                           'experiment_id', 'member', 'frequency',
                            'domain'])['variable'].apply(list).to_frame()
 
 # write the table to excel
