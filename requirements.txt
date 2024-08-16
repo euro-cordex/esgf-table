@@ -1,0 +1,6 @@
+py-cordex
+requests_cache==0.5.2
+esgf-pyclient
+openpyxl
+tqdm
+cftime
