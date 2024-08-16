@@ -1,6 +1,6 @@
 # ESGF Table
 
-[![example workflow](https://github.com/euro-cordex/esgf-crawler/actions/workflows/manual.yml/badge.svg)](https://github.com/euro-cordex/esgf-crawler/actions)
+[![update euro-cordex simulation list](https://github.com/euro-cordex/esgf-table/actions/workflows/update.yml/badge.svg)](https://github.com/euro-cordex/esgf-table/actions/workflows/update.yml)
 
 A table of Cordex Simulations currently available in the ESGF. This table is now updated
 nightly. The tables contains all Cordex simulation on the `EUR-11` domain.
