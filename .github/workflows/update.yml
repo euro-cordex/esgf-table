@@ -1,0 +1,39 @@
+# This is a basic workflow that is manually triggered
+
+name: update euro-cordex simulation list
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
+  schedule:
+  - cron: "0 0 * * *"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  update_simulation_list:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: install requirements
+      run: pip install -r requirements.txt
+    - name: update tables
+      env:
+        WANDB_CONSOLE: "off"
+      run: python access-esgf.py
+    - name: pushes results to table repository
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      run: bash update-tables.sh
