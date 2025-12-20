@@ -26836,7 +26836,6 @@ cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,rsds,v
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,rsus,v20190925,esgf1.dkrz.de
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,rsdt,v20190925,esgf1.dkrz.de
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,rsut,v20190925,esgf1.dkrz.de
-cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,sfcWind,v20190925,esgf1.dkrz.de
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,snw,v20190925,esgf1.dkrz.de
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,sem,hfss,v20190925,esgf1.dkrz.de
 cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,sem,mrso,v20190925,esgf1.dkrz.de
@@ -36310,3 +36309,4 @@ cordex,output,EUR-11,KNMI,CNRM-CERFACS-CNRM-CM5,rcp26,r1i1p1,RACMO22E,v2,fx,sftg
 cordex,output,EUR-11,KNMI,CNRM-CERFACS-CNRM-CM5,rcp45,r1i1p1,RACMO22E,v2,fx,sftgif,v20190509,esgf1.dkrz.de
 cordex,output,EUR-11,KNMI,CNRM-CERFACS-CNRM-CM5,historical,r1i1p1,RACMO22E,v2,fx,sftgif,v20181212,esgf1.dkrz.de
 cordex,output,EUR-11,KNMI,CNRM-CERFACS-CNRM-CM5,rcp85,r1i1p1,RACMO22E,v2,fx,sftgif,v20181212,esgf1.dkrz.de
+cordex,output,EUR-11,GERICS,MPI-M-MPI-ESM-LR,rcp85,r3i1p1,REMO2015,v1,day,sfcWind,v20190925,esgf1.dkrz.de
